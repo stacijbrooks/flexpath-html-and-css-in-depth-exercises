@@ -1,0 +1,134 @@
+h1 {
+    color: blue;
+    font-family: Arial;
+}
+
+body {
+    background-color: lightgray;
+}
+
+header {
+    background-image: url("https://t3.ftcdn.net/jpg/02/14/26/32/360_F_214263275_yFsy0Uk8QXxqp1vf31hHiJ0zKJwKdcoS.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 50px;
+}
+
+.highlight {
+    color:green;
+}
+
+#main-title {
+    font-size: 36px;
+}
+
+input[type="text"] {
+border-color: blue;
+}
+
+nav li {
+    display: inline;
+    padding: 10px;
+}
+
+@media (max-width: 600px) {
+    body {
+        background-color: white;
+    }
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-evenly;
+    background-color: darkgray;
+    padding: 10px;
+}
+
+/* Navigation links */
+.nav-links {
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+    padding: 0;
+}
+
+/* Link styling */
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+}
+
+/* Hamburger icon */
+.menu-toggle {
+    display: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.navbar a {
+    color:white;
+    padding: 10px;
+    transition: background-color 0.3s;
+}
+
+.navbar a:visited {
+    color: purple;
+}
+
+.navbar a:hover {
+    background-color: black;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.gallery img {
+    width: 100%;
+    height: auto;
+}
+
+@media (max-width: 600px) {
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: darkgray;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+p {
+    color: blue;
+}
+
+section.highlight p {
+    color: green;
+}
+
+@media (max-width: 600px) {
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+}

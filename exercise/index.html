@@ -4,30 +4,84 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="styles.css">
+
     <title>My First HTML Page</title>
 </head>
 
 <body>
+
     <header>
-        <h1>Welcome to My Page</h1>
+        <h1 id="main-title">Welcome to My Page</h1>
     </header>
-    <main>
-        <section>
-            <h2>About Me</h2>
-            <p>Staci is a health coach who loves all things fitness & dogs!!</p>
 
-            <a href="about.html">Learn more about me</a>
-    </main>
+    <div>
+        <main>
+            <section>
+                <h2>About Me</h2>
+                <input type="text" placeholder="Enter your Name">
+                <p>
+                    Staci is a health coach who loves all things fitness & dogs!!
+                </p>
+                <!-- <a href="about.html">Learn more about me</a> -->
+                <!-- <nav class="navbar">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact Me</a></li>
+                    </ul>
+                </nav> -->
 
-    <ul>
-        <li>Fitness</li>
-        <li>Nutrition</li>
-        <li>Martial Arts</li>
-        <li>Koda</li>
-    </ul>
-    </section>
+                <nav class="navbar">
+                    <div class="menu-toggle">☰</div>
 
-    <img src="https://dbw3zep4prcju.cloudfront.net/animal/2fdece77-dc65-4bb6-8b43-fabcd3602a8a/image/7c4f6e17-8f8b-4840-b746-623a8bc0595b.jpg"
-    alt="Shepherd mix named Koda">
+                    <ul class="nav-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact Me</a></li>
+                    </ul>
+                </nav>
+            </section>
+            <section>
+                <h2>Photo Gallery</h2>
+
+                <div class="gallery">
+                    <img src="https://placedog.net/300/300?id=1" alt="Dog">
+                    <img src="https://placedog.net/300/300?id=2" alt="Dog">
+                    <img src="https://placedog.net/300/300?id=3" alt="Dog">
+
+                    <img src="https://picsum.photos/id/26/300/300" alt="Fitness">
+                    <img src="https://picsum.photos/id/64/300/300" alt="Fitness">
+                    <img src="https://picsum.photos/id/91/300/300" alt="Fitness">
+                </div>
+            </section>
+            <section>
+                <h2>My Hobbies</h2>
+
+                <ul>
+                    <li class="highlight">Fitness</li>
+                    <li class="highlight">Nutrition</li>
+                    <li class="highlight">Martial Arts</li>
+                    <li class="highlight">Koda</li>
+                </ul>
+            </section>
+
+            <img src="https://dbw3zep4prcju.cloudfront.net/animal/2fdece77-dc65-4bb6-8b43-fabcd3602a8a/image/7c4f6e17-8f8b-4840-b746-623a8bc0595b.jpg"
+                alt="Shepherd mix named Koda">
+        </main>
+    </div>
+    <footer>
+        @ 2026 Staci Brooks
+    </footer>
+<script>
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
+
+    menuToggle.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+    });
+</script>
+</body>
 
 </html>
